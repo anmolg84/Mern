@@ -1,0 +1,52 @@
+React, NodeJS, Express & MongoDB - The MERN Fullstack Guide:
+
+M : MongoDB {NOSQL Database Solution}
+E : Express {Node.JS Framework}
+R : React {Browser Side JS Library (Frontend)}
+N : Node {Server Side JS Runtime and environment  where JS code can be executed outside of a browser}
+
+Full MERN Stack Application : Client-Side {Frontend{React}} +  Server-Side {Backend{Node,Express connected with MongoDB}} + These two sides communicate using HTTP Request and Responses 
+
+FRONTEND ->
+React : Browser (Client) Side JS Library which allows you to build highly reactive UI SPA + Rendering UI on the browser with dynamic data instantly and smoothly + Routing (React Router DOM) + State Management (Hooks , Redux {official React UI bindings layer}) + Component (Code reuse) + Styling {CSS}
+> Uses Declarative approach : focus only on result not on steps
+> Uses Components for building UI 
+> Creation : npx create-react-app react-refresher 
+> JSX : Javascript XML , allows us to write html inside JS
+> Components -> Presentational Components {Just provide the  output} + Stateful Components {Smarter} 
+> Props , Data Mapping , Adding data in Props , State Management for re rendering (UseState Hooks) , Fetching Input and re-rendering
+> Portals : Portals provide a first-class way to render children into a DOM node that exists outside the DOM
+> useParams Hooks : useParams hooks that let you access the parameters of the current route
+
+DATABASE ->
+MongoDB : NoSQL database which stores Application data "documents" in form of "collections" + always  integrated/connected with node/express environment and not with react due to high security reasons + Enforces no Data Schema , Relation + best used in high frequency data logs, orders,  chat(messages)
+> MongoDB atlas : Signup + verify email + login + create Cluster + Add user + choose local env + add current IP + Create Cluster 
+> How to install ? npm install mongodb + create a mongodb.js file + add Your logic to create and get list of products + connect it to atlas + using Postman Get a Post request + Check for data in database
+
+BACKEND ->
+Node : Server Side JS Runtime + Listen to requests and responses + Host Env for JS + allows to run JS outside of a browser
+> How to Execute : node FILENAME.js
+> nodemon : basically module helps to restart the server after saving all changes {npm install nodemon} + nodemon App.js
+Express : Node.JS Framework + Simplifies server side code and logic + Middleware focused based request handling utilities 
+Similar Format as in API : Application Programming Interface + Third Party application use + all functional utilities + Major 2 type of API :
+1. REST API : Represantational State Transfer + Request Path (Different URL's)+ different https verbs {=endpoints} for different action on server + API is stateless and decoupled from any frontend + most common and easy to use 
+HTTPS Verbs : GET(Get resource from server) , POST (post resource to the server) , PUT (put resource onto the server) , PATCH (update parts of existing resource on the server) , DELETE (delete a resource on the server)
+REST API Endpoints : POST/post , GET/posts , GET/posts/:postid {Request looks alike}
+2. GraphQL API : One URL + One https verbs {one endpoints} that accepts all query expression + uses Query Expressions  to identify and action on server + API is stateless and decoupled from any frontend
+GRAPHQL API Endpoints : POST/graphql {Only one endpoint and post expression contain Query Expression}
+
+Connection:
+> Communicate between each other using HTTP request  and responses and data is exchanged in JSON (Javascript Object Notation) format .
+1. One server host Node API + React SPA -> Node Api handles request + request not targetting API return React SPA + data is exchaned in JSON format
+2. Two Seperated Server : One for react and one for hosting API -> Node handles request + react served from static seperate host + data is exchanged in JSON format
+3. Single Server : One server for node/express and rendering HTML pages using EJS etc {Templating Engines}
+
+How to start ?
+> cd frontend > npm install > npm start {if error resolve using npm install react-scripts@2.1.8}  {localhost:3000}
+> cd backend > npm install > npm start {localhost:5000}
+
+Planning an Application
+1. Come up with an idea / solve a problem
+2. Create a design/sketch
+3. plan your data model
+4. plan your endpoints(API,Backend) and pages(SPA,Frontend)
